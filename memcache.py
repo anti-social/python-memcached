@@ -948,8 +948,6 @@ class Client(threading.local):
         flags = 0
         if isinstance(val, six.binary_type):
             pass
-        elif isinstance(val, six.text_type):
-            val = val.encode('utf-8')
         elif isinstance(val, int):
             flags |= Client._FLAG_INTEGER
             val = '%d' % val
